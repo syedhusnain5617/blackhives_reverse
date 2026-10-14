@@ -78,7 +78,7 @@ export function Header({ onNavigateHome, isProjectDetail = false }: HeaderProps 
             onClick={(e) => handleLinkClick(e, '#contact')}
             className="pill-action-btn hidden sm:inline-flex items-center justify-center bg-white text-black hover:bg-black hover:text-white border border-white hover:border-white/50 px-5 py-2 text-label-md uppercase tracking-[0.16em] font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           >
-            <span>Initiate Protocol</span>
+            <span>Start Project</span>
             <span className="ml-1.5 text-xs">→</span>
           </a>
           <div
@@ -122,7 +122,7 @@ export function Header({ onNavigateHome, isProjectDetail = false }: HeaderProps 
               className="pill-action-btn mt-space-sm inline-flex items-center justify-center bg-white text-black px-5 py-3 text-label-md uppercase tracking-[0.16em] font-semibold"
               onClick={(e) => handleLinkClick(e, '#contact')}
             >
-              Initiate Protocol →
+              Start Project →
             </a>
           </div>
         </nav>
