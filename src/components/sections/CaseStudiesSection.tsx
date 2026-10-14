@@ -10,7 +10,11 @@ interface LightboxState {
   client: string;
 }
 
-export function CaseStudiesSection() {
+interface CaseStudiesSectionProps {
+  onSelectProject?: (projectId: string) => void;
+}
+
+export function CaseStudiesSection({ onSelectProject }: CaseStudiesSectionProps = {}) {
   const [cs1, cs2, cs3, cs4] = CASE_STUDIES;
   const [lightbox, setLightbox] = useState<LightboxState>({
     isOpen: false,
@@ -76,7 +80,12 @@ export function CaseStudiesSection() {
                       {cs1.client}
                     </span>
                   </div>
-                  <h3 className="text-headline-md text-white">{cs1.title}</h3>
+                  <h3
+                    className="text-headline-md text-white hover:text-white/80 cursor-pointer transition-colors"
+                    onClick={() => onSelectProject?.(cs1.id)}
+                  >
+                    {cs1.title}
+                  </h3>
                 </div>
                 <p className="text-body-md text-text-secondary leading-relaxed">
                   {cs1.description}
@@ -92,13 +101,14 @@ export function CaseStudiesSection() {
                   ))}
                 </div>
                 <div className="pt-space-xs flex items-center gap-space-md">
-                  <a
-                    href="#contact"
-                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all"
+                  <button
+                    type="button"
+                    onClick={() => onSelectProject?.(cs1.id)}
+                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all cursor-pointer group/btn"
                   >
-                    <span>Dossier Detail</span>
-                    <span>→</span>
-                  </a>
+                    <span>Project Detail</span>
+                    <span className="transition-transform group-hover/btn:translate-x-0.5">→</span>
+                  </button>
                   <span className="font-mono text-xs text-text-muted">{cs1.metric}</span>
                 </div>
               </div>
@@ -166,7 +176,12 @@ export function CaseStudiesSection() {
                       {cs2.client}
                     </span>
                   </div>
-                  <h3 className="text-headline-md text-white">{cs2.title}</h3>
+                  <h3
+                    className="text-headline-md text-white hover:text-white/80 cursor-pointer transition-colors"
+                    onClick={() => onSelectProject?.(cs2.id)}
+                  >
+                    {cs2.title}
+                  </h3>
                 </div>
                 <p className="text-body-md text-text-secondary leading-relaxed">
                   {cs2.description}
@@ -182,13 +197,14 @@ export function CaseStudiesSection() {
                   ))}
                 </div>
                 <div className="pt-space-xs flex items-center gap-space-md">
-                  <a
-                    href="#contact"
-                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all"
+                  <button
+                    type="button"
+                    onClick={() => onSelectProject?.(cs2.id)}
+                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all cursor-pointer group/btn"
                   >
-                    <span>Dossier Detail</span>
-                    <span>→</span>
-                  </a>
+                    <span>Project Detail</span>
+                    <span className="transition-transform group-hover/btn:translate-x-0.5">→</span>
+                  </button>
                   <span className="font-mono text-xs text-text-muted">{cs2.metric}</span>
                 </div>
               </div>
@@ -208,7 +224,12 @@ export function CaseStudiesSection() {
                       {cs3.client}
                     </span>
                   </div>
-                  <h3 className="text-headline-md text-white">{cs3.title}</h3>
+                  <h3
+                    className="text-headline-md text-white hover:text-white/80 cursor-pointer transition-colors"
+                    onClick={() => onSelectProject?.(cs3.id)}
+                  >
+                    {cs3.title}
+                  </h3>
                 </div>
                 <p className="text-body-md text-text-secondary leading-relaxed">
                   {cs3.description}
@@ -224,13 +245,14 @@ export function CaseStudiesSection() {
                   ))}
                 </div>
                 <div className="pt-space-xs flex items-center gap-space-md">
-                  <a
-                    href="#contact"
-                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all"
+                  <button
+                    type="button"
+                    onClick={() => onSelectProject?.(cs3.id)}
+                    className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all cursor-pointer group/btn"
                   >
-                    <span>Dossier Detail</span>
-                    <span>→</span>
-                  </a>
+                    <span>Project Detail</span>
+                    <span className="transition-transform group-hover/btn:translate-x-0.5">→</span>
+                  </button>
                   <span className="font-mono text-xs text-text-muted">{cs3.metric}</span>
                 </div>
               </div>
@@ -274,7 +296,12 @@ export function CaseStudiesSection() {
                       {cs4.client}
                     </span>
                   </div>
-                  <h3 className="text-headline-md text-white">{cs4.title}</h3>
+                  <h3
+                    className="text-headline-md text-white hover:text-white/80 cursor-pointer transition-colors"
+                    onClick={() => onSelectProject?.(cs4.id)}
+                  >
+                    {cs4.title}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {cs4.tags.map((tag) => (
@@ -316,13 +343,14 @@ export function CaseStudiesSection() {
                 <span className="flex items-center gap-1.5 text-white">
                   <span className="w-2 h-2 bg-white inline-block" /> {cs4.metric}
                 </span>
-                <a
-                  href="#contact"
-                  className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all"
+                <button
+                  type="button"
+                  onClick={() => onSelectProject?.(cs4.id)}
+                  className="pill-action-btn inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white border border-white px-5 py-2 text-label-md uppercase tracking-[0.14em] font-semibold transition-all cursor-pointer group/btn"
                 >
-                  <span>Dossier Detail</span>
-                  <span>→</span>
-                </a>
+                  <span>Project Detail</span>
+                  <span className="transition-transform group-hover/btn:translate-x-0.5">→</span>
+                </button>
               </div>
             </div>
           </article>

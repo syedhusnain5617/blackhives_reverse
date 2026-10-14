@@ -169,6 +169,7 @@ export const SERVICES: Service[] = [
    CASE STUDIES
    ============================================================ */
 export interface CaseStudy {
+  id: string;
   client: string;
   title: string;
   description: string;
@@ -181,6 +182,7 @@ export interface CaseStudy {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
+    id: 'e-invoicing-platform',
     client: 'Steel Horizons Solution',
     title: 'Centralized E-Invoicing Platform',
     description:
@@ -192,6 +194,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     layout: 'image-right',
   },
   {
+    id: 'ai-learning-platform',
     client: 'Cognify Solutions SDN BHD',
     title: 'AI-Powered Learning & Assessment Platform',
     description:
@@ -203,6 +206,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     layout: 'image-left',
   },
   {
+    id: 'ai-recruitment-platform',
     client: 'TalentBridge Global',
     title: 'AI-Powered Recruitment & Talent Intelligence Platform',
     description:
@@ -214,6 +218,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     layout: 'image-right',
   },
   {
+    id: 'enterprise-learning-platform',
     client: 'Academy Brighton Consulting',
     title: 'Enterprise Learning & Digital Transformation Platform',
     description:
