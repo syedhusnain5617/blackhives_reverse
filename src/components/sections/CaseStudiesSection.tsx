@@ -52,7 +52,7 @@ export function CaseStudiesSection() {
               03 // PROVEN PRODUCTION
             </span>
             <h2 className="text-headline-lg-mobile md:text-headline-lg text-white">
-              Authentic Case Dossiers
+              Authentic Projects
             </h2>
             <p className="text-body-md text-text-secondary pt-space-xs">
               Production software engineered to sovereign compliance standards, driving operational
@@ -104,7 +104,7 @@ export function CaseStudiesSection() {
               </div>
               <div className="lg:col-span-7">
                 <div
-                  className="overflow-hidden border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
+                  className="overflow-hidden rounded-xl border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
                   onClick={() => openLightbox(cs1.image, cs1.imageAlt, cs1.title, cs1.client)}
                   role="button"
                   tabIndex={0}
@@ -136,7 +136,7 @@ export function CaseStudiesSection() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-lg items-center">
               <div className="lg:col-span-7 order-2 lg:order-1">
                 <div
-                  className="overflow-hidden border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
+                  className="overflow-hidden rounded-xl border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
                   onClick={() => openLightbox(cs2.image, cs2.imageAlt, cs2.title, cs2.client)}
                   role="button"
                   tabIndex={0}
@@ -236,7 +236,7 @@ export function CaseStudiesSection() {
               </div>
               <div className="lg:col-span-7">
                 <div
-                  className="overflow-hidden border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
+                  className="overflow-hidden rounded-xl border border-white/20 aspect-[16/10] bg-black relative group shadow-2xl cursor-pointer"
                   onClick={() => openLightbox(cs3.image, cs3.imageAlt, cs3.title, cs3.client)}
                   role="button"
                   tabIndex={0}
@@ -291,7 +291,7 @@ export function CaseStudiesSection() {
                 {cs4.description}
               </p>
               <div
-                className="overflow-hidden border border-white/20 aspect-[21/9] bg-black relative group shadow-2xl cursor-pointer"
+                className="overflow-hidden rounded-xl border border-white/20 aspect-[21/9] bg-black relative group shadow-2xl cursor-pointer"
                 onClick={() => openLightbox(cs4.image, cs4.imageAlt, cs4.title, cs4.client)}
                 role="button"
                 tabIndex={0}
@@ -389,7 +389,7 @@ export function CaseStudiesSection() {
             </div>
 
             {/* Modal Image */}
-            <div className="overflow-hidden border border-white/10 max-h-[75vh] flex items-center justify-center bg-black">
+            <div className="overflow-hidden rounded-xl border border-white/10 max-h-[75vh] flex items-center justify-center bg-black">
               <img
                 src={lightbox.imageSrc}
                 alt={lightbox.imageAlt}

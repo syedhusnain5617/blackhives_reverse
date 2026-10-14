@@ -207,7 +207,7 @@ export function HeroSection() {
                 <span className="material-symbols-outlined text-[16px]">
                   visibility
                 </span>
-                <span>Case Dossiers</span>
+                <span>Projects</span>
               </a>
             </div>
 

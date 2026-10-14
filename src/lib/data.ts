@@ -375,7 +375,7 @@ export const FOOTER_NAV = [
   { label: 'Emblem Core', href: '#hero' },
   { label: 'GaaS Substrate', href: '#gaas-infra' },
   { label: 'Services', href: '#services' },
-  { label: 'Case Dossiers', href: '#work' },
+  { label: 'Projects', href: '#work' },
   { label: 'Industries', href: '#industries' },
 ];
 
